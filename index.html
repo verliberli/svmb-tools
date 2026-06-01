@@ -355,9 +355,9 @@ async function generate() {
   overlay.classList.add('show');
 
   try {
-    const res = await fetch('/.netlify/functions/api', {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': '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', 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 1000,
